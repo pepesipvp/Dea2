@@ -27,13 +27,22 @@ export default function Hero() {
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </button>
 
-          <div className="flex items-center justify-center gap-8 pt-8 text-gray-400">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 pt-8 text-gray-400">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-sm md:text-base">Vagas Limitadas</span>
+              <span className="text-sm md:text-base font-medium">Vagas Limitadas</span>
             </div>
-            <div className="text-sm md:text-base">
-              ⭐ <span className="font-semibold">4.9/5</span> (2.347 alunos)
+            <div className="h-6 w-px bg-gray-600 hidden md:block"></div>
+            <div className="flex items-center gap-3">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-lg">★</span>
+                ))}
+              </div>
+              <div className="text-sm md:text-base">
+                <span className="font-semibold text-white">4.9/5</span>
+                <span className="text-gray-500"> (2.347 alunos)</span>
+              </div>
             </div>
           </div>
         </div>
